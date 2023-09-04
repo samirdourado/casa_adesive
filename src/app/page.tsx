@@ -1,3 +1,4 @@
+import Button from '@/components/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BsInstagram, BsWhatsapp, BsFillArrowUpSquareFill } from 'react-icons/bs'
@@ -7,16 +8,18 @@ import { MdPlace } from 'react-icons/md'
 export default function Home() {
   return (
     <main>
-      <Image
-        // className={styles.logo}
-        src="/logo.webp"
-        alt="Casa Adesive Logo"
-        width={221}
-        height={144}
-        priority        
-      />
+      <header>
+        <Image
+          // className={styles.logo}
+          src="/logo.webp"
+          alt="Casa Adesive Logo"
+          width={221}
+          height={144}
+          priority        
+        />
+      </header>
 
-      <section>
+      <aside>
       <Image
         // className={styles.logo}
         src="/cozinha-preta-1100x580.jpeg"
@@ -27,8 +30,11 @@ export default function Home() {
       />
       <div>
         <h1>Casa Adesive</h1>
-        <p>Somos especialistas em adesivos decorativos de alta qualidade. Transformamos sua casa em um ambiente único e acolhedor com soluções personalizadas. Com uma equipe altamente capacitada, estamos prontos para atender suas necessidades.</p>
-        <button><BsWhatsapp/> WhatsApp</button>
+        <p>Somos especialistas em adesivos decorativos de alta qualidade. Transformamos sua casa em um ambiente único e acolhedor com soluções personalizadas. Com uma equipe altamente capacitada, estamos prontos para atender suas necessidades.</p>        
+        <Button 
+         icon={<BsWhatsapp/>}
+         text={'Whatsapp'}
+        />
       </div>
 
       <section>
@@ -72,11 +78,7 @@ export default function Home() {
         <p>COPYRIGHT © 2023 CASAADESIVE – TODOS OS DIREITOS RESERVADOS.</p>
       </section>
 
-      
-        
-      </section>
-
-      
+      </aside>      
     </main>
   )
 }
