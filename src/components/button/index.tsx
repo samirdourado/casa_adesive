@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 import styles from './styles.module.scss'
 
 const Button = ({icon, text}: any) => {
     return (
-        <button className={styles.container}>
+        <button className={styles.bt__config}>
             {icon} {text}
         </button>
     )

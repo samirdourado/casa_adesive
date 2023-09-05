@@ -1,0 +1,45 @@
+@use 'abstracts' as *;
+
+.container {
+    display:flex;
+    width: 100%;
+
+    @media (max-width: 1279px) {
+        flex-direction: column;
+    };
+
+    @media (min-width: 1280px) {        
+        flex-direction: row;
+    };
+}
+
+.banner {
+    width: 100%;
+    object-fit: cover;
+    
+    @media (max-width: 1279px) {
+        height: 358px;
+        margin-bottom: 1.875rem;
+    };
+
+    @media (min-width: 1280px) {
+        height: 100vh;
+        margin-bottom: 6.25rem;
+    };
+};
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 580px;
+
+    @media (max-width: 1279px) {
+        padding: 0 10px;
+        margin-bottom: 30px;
+    };
+
+    @media (min-width: 1279px) {
+        margin-bottom: 70px;
+    };
+};

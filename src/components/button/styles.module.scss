@@ -1,5 +1,12 @@
 @use 'abstracts' as *;
 
-.container {
-    background-color: aqua;
+.bt__config {
+    padding: 10px 10px;
+    max-width: 120px;
+    max-height: 60px;
+    cursor: pointer;
+    border: none;
+    background-color: $color-brand-1;
+    color: $color-white;
+    font-weight: 600;
 }

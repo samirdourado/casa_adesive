@@ -1,34 +1,28 @@
-import Button from '@/components/button'
-import Image from 'next/image'
-import Link from 'next/link'
-import { BsInstagram, BsWhatsapp, BsFillArrowUpSquareFill } from 'react-icons/bs'
-import { MdPlace } from 'react-icons/md'
+import Button from '@/components/button';
+import Header from '@/components/header';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsInstagram, BsWhatsapp, BsFillArrowUpSquareFill } from 'react-icons/bs';
+import { MdPlace } from 'react-icons/md';
+
+import styles from './styles.module.scss';
 
 
 export default function Home() {
   return (
-    <main>
-      <header>
-        <Image
-          // className={styles.logo}
-          src="/logo.webp"
-          alt="Casa Adesive Logo"
-          width={221}
-          height={144}
-          priority        
-        />
-      </header>
+    <section className={styles.container}>
+      <Header/>
 
-      <aside>
+      <main>
       <Image
-        // className={styles.logo}
+        className={styles.banner}
         src="/cozinha-preta-1100x580.jpeg"
         alt="Casa Adesive Logo"
         width={221}
         height={144}
-        priority        
+        priority
       />
-      <div>
+      <div className={styles.description}>
         <h1>Casa Adesive</h1>
         <p>Somos especialistas em adesivos decorativos de alta qualidade. Transformamos sua casa em um ambiente único e acolhedor com soluções personalizadas. Com uma equipe altamente capacitada, estamos prontos para atender suas necessidades.</p>        
         <Button 
@@ -78,7 +72,7 @@ export default function Home() {
         <p>COPYRIGHT © 2023 CASAADESIVE – TODOS OS DIREITOS RESERVADOS.</p>
       </section>
 
-      </aside>      
-    </main>
+      </main>      
+    </section>
   )
 }
