@@ -59,3 +59,19 @@ $text-font-stack: "Inter, Roboto, Arial, sans-serif";
 	text-decoration: none;
 	text-transform: none;
 }
+@mixin text-style-font-7() {
+	font-size: 20px;
+	font-family: "Inter";
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-font-8() {
+	font-size: 16px;
+	font-family: "Inter";
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}

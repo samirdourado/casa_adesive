@@ -6,6 +6,7 @@ import { BsInstagram, BsWhatsapp, BsFillArrowUpSquareFill } from 'react-icons/bs
 import { MdPlace } from 'react-icons/md';
 
 import styles from './styles.module.scss';
+import HintsHolder from '@/components/hintsHolder';
 
 
 export default function Home() {
@@ -31,29 +32,7 @@ export default function Home() {
         />
       </div>
 
-      <section>
-        <h2>Dicas</h2>
-        <ul>
-          <li>
-            <figure>
-            <Image
-              // className={styles.logo}
-              src="/rs=w_1280.webp"
-              alt="Casa Adesive Logo"
-              width={221}
-              height={144}
-              priority        
-            />
-            </figure>
-            <div>
-              <p>10 de junho de 2023</p>
-              <p>Cimento Queimado: Origem e características de uma estética brutalinha 3</p>
-              <p>A parede de cimento queimado vem conquistando cada vez mais espaço na decoração de interiores, trazendo consigo uma estética bruta e moderna. Neste artigo, vamos explorar a origem desse revestimento e suas características...</p>
-              <Link href={''}>Ler</Link>
-            </div>
-          </li>
-        </ul>
-      </section>
+      <HintsHolder/>
 
       <section>
         <h2>Conete-se Conosco</h2>
