@@ -6,7 +6,8 @@ import styles from './styles.module.scss';
 import Button from '../button';
 
 const Contact = () => {
-    const instagramLink = "https://www.instagram.com/casaadesive/"
+    const instagramLink = "https://www.instagram.com/casaadesive/";
+
     return (
         <section className={styles.container} id='contato'>
         <h2>Conete-se Conosco</h2>        
@@ -31,7 +32,7 @@ const Contact = () => {
             text={'Como Chegar'}
         />
       </section>
-    )
+    );
 };
 
 export default Contact;

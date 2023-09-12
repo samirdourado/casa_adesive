@@ -20,7 +20,14 @@
     };
 };
 
+.description > h1 {
+    @include text-style-font-7;
+    color: $color-black
+};
+
 .description > p {
+    color: $color-grey-3;
+
     @media (max-width: 79.9375rem) {
         text-align: center;
     };

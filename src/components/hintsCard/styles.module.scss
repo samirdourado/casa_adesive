@@ -62,6 +62,8 @@
 };
 
 .card__body__title {
+    color: $color-brand-2;
+    
     @media (max-width: 79.9375rem) {
         @include text-style-font-4;     
     };
@@ -78,6 +80,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    color: $color-grey-3;
 
     @media (max-width: 79.9375rem) {
         @include text-style-font-5;
