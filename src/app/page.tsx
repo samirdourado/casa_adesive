@@ -22,8 +22,9 @@ export default function Home() {
         width={221}
         height={144}
         priority
+        id='home'
       />
-      <div className={styles.description}>
+      <div className={styles.description} id='quemsomos'>
         <h1>Casa Adesive</h1>
         <p>Somos especialistas em adesivos decorativos de alta qualidade. Transformamos sua casa em um ambiente único e acolhedor com soluções personalizadas. Com uma equipe altamente capacitada, estamos prontos para atender suas necessidades.</p>        
         <Button 
@@ -33,8 +34,8 @@ export default function Home() {
       </div>
 
       <HintsHolder/>
-
-      <section>
+      
+      <section id='contato'>
         <h2>Conete-se Conosco</h2>
         <h3><BsInstagram/></h3>
         <h2>Contato</h2>
@@ -47,7 +48,8 @@ export default function Home() {
       </section>
 
       <section>
-        <button><BsFillArrowUpSquareFill/></button>
+        {/* <button><BsFillArrowUpSquareFill/></button> */}
+        <Link href={'#home'}><BsFillArrowUpSquareFill/></Link>
         <p>COPYRIGHT © 2023 CASAADESIVE – TODOS OS DIREITOS RESERVADOS.</p>
       </section>
 

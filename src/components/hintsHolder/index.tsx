@@ -6,17 +6,9 @@ import HintsCard from '../hintsCard';
 
 const HintsHolder = () => {
     return (
-        <section className={styles.container__hints}>
+        <section className={styles.container__hints} id='dicas'>
             <h2 className={styles.title__hint}>Dicas</h2>
             <ul className={styles.holder__hints}>
-                <HintsCard/>
-                <HintsCard/>
-                <HintsCard/>
-                <HintsCard/>
-                <HintsCard/>
-                <HintsCard/>
-                <HintsCard/>
-                <HintsCard/>
                 <HintsCard/>
                 <HintsCard/>
                 <HintsCard/>

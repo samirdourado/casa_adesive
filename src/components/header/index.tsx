@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './styles.module.scss'
 
 const Header = () => {
@@ -12,6 +13,13 @@ const Header = () => {
             height={97}
             priority        
             />
+            <nav className={styles.nav__container}>
+                <Link href={'#home'}>HOME</Link>
+                <Link href={'#quemsomos'}>QUEM SOMOS</Link>
+                <Link href={'#dicas'}>DICAS</Link>
+                <Link href={'#contato'}>CONTATO</Link>
+                
+            </nav>
       </header>
     )
 }

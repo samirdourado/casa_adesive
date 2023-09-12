@@ -1,20 +1,47 @@
 @use 'abstracts' as *;
 
-.container {    
+.container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 50px;
     
-    @media (max-width: 1279px) {
-        width: 100%;
-        margin: 20px auto;
-    };
+    // @media (max-width: 1279px) {
+    //     width: 100%;
+    //     margin: 20px auto;
+    // };
 
-    @media (min-width: 1280px) {
-        // height: 100%;
-        margin: auto 30px;
-        flex-direction: column;        
-        // padding: 15px 16px;
-        // transition: 0.8s ease-out;
+    // @media (min-width: 1280px) {
+    //     // height: 100%;
+    //     // margin: auto 30px;
+    //     // flex-direction: column;
+    //     // padding: 15px 16px;
+    //     // transition: 0.8s ease-out;
+    // };
+};
+
+.nav__container {
+    @media (max-width: 650px) {
+        display: none;
+    };
+    @media (min-width: 651px) {
+        display: flex;
+        align-items: center;
+        gap: 16px;
     };
 };
+
+.nav__container__hamburguer {
+    @media (max-width: 650px) {};
+};
+
+.nav__container > a {
+    @include text-style-font-6;
+    color: $color-brand-1;
+}
+
+.nav__container > a:hover {    
+    text-decoration: underline;
+}

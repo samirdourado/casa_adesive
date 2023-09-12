@@ -15,7 +15,7 @@
     @media (min-width: 1280px) {        
         min-width: 490px;
         width: 490px;
-        min-height: 590px;
+        max-height: 590px;
     };
 };
 
@@ -81,7 +81,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 
-    @media (max-width: 1279px) {                
+    @media (max-width: 1279px) {
         @include text-style-font-5;
     };
     
