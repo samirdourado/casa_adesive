@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 const Header = () => {
     return (
@@ -22,6 +22,6 @@ const Header = () => {
             </nav>
       </header>
     )
-}
+};
 
-export default Header
+export default Header;

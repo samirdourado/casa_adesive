@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.module.scss'
 
 const Button = ({icon, text, onClick, className}: any) => {
     return (
@@ -7,6 +6,6 @@ const Button = ({icon, text, onClick, className}: any) => {
             {icon} {text}
         </button>
     )
-}
+};
 
-export default Button
+export default Button;

@@ -1,12 +1,11 @@
 import Button from '@/components/button';
 import Header from '@/components/header';
 import Image from 'next/image';
-import Link from 'next/link';
-import { BsWhatsapp, BsFillArrowUpSquareFill } from 'react-icons/bs';
-
+import { BsWhatsapp } from 'react-icons/bs';
 import styles from './styles.module.scss';
 import HintsHolder from '@/components/hintsHolder';
 import Contact from '@/components/contact';
+import Footer from '@/components/footer';
 
 
 export default function Home() {
@@ -35,15 +34,9 @@ export default function Home() {
       </div>
 
       <HintsHolder/>
-
-      <Contact/>      
-
-      <section>        
-        <Link href={'#home'}><BsFillArrowUpSquareFill/></Link>
-        <p>COPYRIGHT © 2023 CASAADESIVE – TODOS OS DIREITOS RESERVADOS.</p>
-      </section>
-
+      <Contact/>
+      <Footer/>
       </main>      
     </section>
   )
-}
+};

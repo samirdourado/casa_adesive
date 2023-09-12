@@ -2,7 +2,7 @@
 import React from 'react';
 import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
 import { MdPlace } from 'react-icons/md';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 import Button from '../button';
 
 const Contact = () => {

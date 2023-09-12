@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import Image from 'next/image';
-import Link from 'next/link';
 import HintsCard from '../hintsCard';
 
 const HintsHolder = () => {
@@ -17,4 +15,4 @@ const HintsHolder = () => {
     )
 };
 
-export default HintsHolder
+export default HintsHolder;

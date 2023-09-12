@@ -29,6 +29,6 @@ const HintsCard = () => {
             </div>
         </li>
     )
-}
+};
 
-export default HintsCard
+export default HintsCard;
