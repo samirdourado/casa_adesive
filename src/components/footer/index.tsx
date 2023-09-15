@@ -4,6 +4,7 @@ import { BsFillArrowUpSquareFill } from 'react-icons/bs';
 import styles from './styles.module.scss';
 
 const Footer = () => {
+
     return (
         <section className={styles.container}>
         <Link 

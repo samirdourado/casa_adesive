@@ -20,9 +20,31 @@
     };
 };
 
+.description__active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 36.25rem;  
+    padding-top: 150px;
+    transform: ease 0.3;
+
+    @media (max-width: 79.9375rem) {
+        padding: 0 1.25rem;        
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 1.875rem;
+    };
+
+    @media (min-width: 79.9375rem) {
+        margin-left: 3.125rem;
+        margin-bottom: 4.375rem;
+    };
+};
+
 .description > h1 {
     @include text-style-font-7;
-    color: $color-black
+    color: $color-black;
 };
 
 .description > p {

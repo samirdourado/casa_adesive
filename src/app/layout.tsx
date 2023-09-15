@@ -1,3 +1,4 @@
+import { NavProvider } from '@/contexts/navContext'
 import '../scss/main.scss'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavProvider>
+          {children}
+        </NavProvider>
+      </body>
     </html>
   )
 }

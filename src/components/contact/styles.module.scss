@@ -7,6 +7,14 @@
     padding: 0 0.625rem;
 };
 
+.container__active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.625rem;
+    
+};
+
 .container > h2 {
     margin-bottom: 1.25rem;
 };

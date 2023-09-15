@@ -8,6 +8,15 @@
     margin-bottom: 1.25rem;
 };
 
+.container__hints__active {
+    background-color: $color-brand-1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 0.625rem;
+    margin-bottom: 1.25rem;
+    padding-top: 150px;
+};
+
 .title__hint {
     margin: 0 auto;
     color: $color-white;
