@@ -15,7 +15,7 @@ const HintsHolder = () => {
                 <HintsCard/>
             </ul>
         </section>
-    )
+    );
 };
 
 export default HintsHolder;

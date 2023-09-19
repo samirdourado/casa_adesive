@@ -4,11 +4,9 @@ import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
 import { MdPlace } from 'react-icons/md';
 import styles from './styles.module.scss';
 import Button from '../button';
-import { useNavContext } from '@/contexts/navContext';
 
 const Contact = () => {
-    const instagramLink = "https://www.instagram.com/casaadesive/";
-    const { contactActive }: any = useNavContext();
+    const instagramLink = "https://www.instagram.com/casaadesive/";    
 
     return (
         <section className={styles.container} id='contato'>

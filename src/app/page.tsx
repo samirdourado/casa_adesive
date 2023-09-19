@@ -7,9 +7,12 @@ import HintsHolder from '@/components/hintsHolder';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
 import About from '@/components/about';
+import HamburguerMenu from '@/components/menuHamburguer';
+import { useNavContext } from '@/contexts/navContext';
 
 
 export default function Home() {
+  const { menuActivate }: any = useNavContext();
   
     const [colorBg, setColorBg] = useState(false);    
 
@@ -26,6 +29,7 @@ export default function Home() {
     }, []);
 
   return (
+    <>
     <section className={styles.container}>
       <Header headerBgActive={colorBg}/>
       <main>
@@ -33,8 +37,8 @@ export default function Home() {
           className={styles.banner}
           src="/cozinha-preta-1100x580.jpeg"
           alt="Casa Adesive Logo"
-          width={221}
-          height={144}
+          width={1920}
+          height={1080}
           priority
           id='home'
         />
@@ -42,7 +46,9 @@ export default function Home() {
         <HintsHolder/>
         <Contact/>
         <Footer/>
-      </main>      
+      </main>
+      { menuActivate && <HamburguerMenu/> }
     </section>
+    </>
   )
 };

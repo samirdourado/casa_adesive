@@ -12,6 +12,8 @@ interface navProviderData {
     setHintActive: React.Dispatch<React.SetStateAction<boolean>>;
     contactActive: boolean;
     setContactActive: React.Dispatch<React.SetStateAction<boolean>>;
+    menuActivate: boolean;
+    setMenuActivate: React.Dispatch<React.SetStateAction<boolean>>
 };
 
 const NavContext = createContext<navProviderData>({} as navProviderData);
@@ -20,6 +22,7 @@ export const NavProvider = ({ children }: Props) => {
     const [aboutActive, setAboutActive] = useState(false);
     const [hintActive, setHintActive] = useState(false);
     const [contactActive, setContactActive] = useState(false);
+    const [menuActivate, setMenuActivate] = useState(false);
 
     return (
         <NavContext.Provider
@@ -27,6 +30,7 @@ export const NavProvider = ({ children }: Props) => {
                 aboutActive, setAboutActive,
                 hintActive, setHintActive,
                 contactActive, setContactActive,
+                menuActivate, setMenuActivate,
             }}
         >
             { children }

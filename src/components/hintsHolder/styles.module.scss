@@ -15,6 +15,10 @@
     padding: 1.25rem 0.625rem;
     margin-bottom: 1.25rem;
     padding-top: 150px;
+
+    @media (max-width: 79.9375rem) {
+        padding: 9.375rem 0 0 1.25rem;
+    };
 };
 
 .title__hint {
@@ -24,7 +28,6 @@
 };
 
 .holder__hints {
-    // background-color: aqua;
     display: flex;
     width: 100%;
 

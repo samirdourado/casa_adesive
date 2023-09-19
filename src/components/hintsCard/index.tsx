@@ -8,12 +8,12 @@ const HintsCard = () => {
         <li className={styles.card}>
             <figure className={styles.card__header}>
                 <Image
-                className={styles.card__header__image}
-                src="/rs=w_1280.webp"
-                alt="Casa Adesive Logo"
-                width={270}
-                height={180}
-                priority
+                    className={styles.card__header__image}
+                    src="/rs=w_1280.webp"
+                    alt="Casa Adesive Logo"
+                    width={270}
+                    height={180}
+                    priority
                 />
             </figure>
             <div className={styles.card__body}>
@@ -28,7 +28,7 @@ const HintsCard = () => {
                 </Link>
             </div>
         </li>
-    )
+    );
 };
 
 export default HintsCard;
