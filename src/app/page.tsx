@@ -35,7 +35,7 @@ export default function Home() {
       <main>
         <Image
           className={styles.banner}
-          src="/cozinha-preta-1100x580.jpeg"
+          src="/images/cozinha-preta-1100x580.jpeg"
           alt="Casa Adesive Logo"
           width={1920}
           height={1080}
