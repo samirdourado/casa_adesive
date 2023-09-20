@@ -3,15 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 import dataCards from '@/database';
+import CardPost from '@/interface/card.interface';
 
-// console.log(dataCards)
 
 const HintsCard = () => {
     return (
         <>
         {
             dataCards.length ? (
-                dataCards.map((data: any) =>(
+                dataCards.map((data: CardPost) =>(
                     <li className={styles.card} key={data.id}>
                     <figure className={styles.card__header}>
                         <Image

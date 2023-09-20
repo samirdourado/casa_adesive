@@ -11,8 +11,6 @@ const HintsHolder = () => {
             <h2 className={styles.title__hint}>Dicas</h2>
             <ul className={styles.holder__hints}>
                 <HintsCard/>
-                {/* <HintsCard/>
-                <HintsCard/> */}
             </ul>
         </section>
     );
