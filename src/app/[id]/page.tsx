@@ -6,10 +6,12 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 import { FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Footer from '@/components/footer';
+import CardPost from '@/interface/card.interface';
 
 const PostHints = ({ params }: { params: { id: number } }) => {
 
-    const dataPost = dataCards.filter((data: any) => data.id == params.id)    
+    const dataPost = dataCards.filter((data: any) => data.id == params.id)
+    const othersPost = dataCards.filter((data: any) => data.id != params.id)   
 
     return (
         <div className={styles.body}>
@@ -59,6 +61,37 @@ const PostHints = ({ params }: { params: { id: number } }) => {
             ) : (<p>Carregando...</p>)
         }
         </main>
+        <section className={styles.footer__container}>
+            <section className={styles.footer__subContainer }>
+                <h2>Outras postagens</h2>
+                {othersPost ? (
+                othersPost.map((data: CardPost) => (
+                    <Link href={data.id+""} key={data.id} className={styles.card__mini__container}>
+                        <Image 
+                          className={styles.card__mini__figure} 
+                          src={data.image} 
+                          alt={data.title} 
+                          width={150} 
+                          height={150}
+                          priority
+                        />
+                        <div>
+                            <h2 className={styles.card__mini__title}>{data.title}</h2>
+                            <p className={styles.card__mini__date}>{data.date}</p>
+                        </div>
+                    </Link>
+                ))
+                ) : (
+                <p>Carregando</p>
+                )}
+
+
+            </section>
+            <section className={styles.footer__subContainer}>
+                <h2>Entre em contato</h2>
+                
+            </section>
+        </section>
         <Footer/>
         </div>
     );

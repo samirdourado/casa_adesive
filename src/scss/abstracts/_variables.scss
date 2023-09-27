@@ -78,7 +78,7 @@ $text-font-stack: "Inter, Roboto, Arial, sans-serif";
 	text-transform: none;
 };
 @mixin text-style-font-9() {
-	font-size: 32px;
+	font-size: 2rem;
 	font-family: "Inter";
 	font-weight: 700;
 	font-style: normal;
@@ -86,9 +86,17 @@ $text-font-stack: "Inter, Roboto, Arial, sans-serif";
 	text-transform: none;
 };
 @mixin text-style-font-10() {
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: "Inter";
 	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+};
+@mixin text-style-font-11() {
+	font-size: 1.25rem;
+	font-family: "Inter";
+	font-weight: 600;
 	font-style: normal;
 	text-decoration: none;
 	text-transform: none;

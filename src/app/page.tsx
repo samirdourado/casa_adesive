@@ -14,7 +14,7 @@ import { useNavContext } from '@/contexts/navContext';
 export default function Home() {
   const { menuActivate }: any = useNavContext();
   
-    const [colorBg, setColorBg] = useState(false);    
+    const [colorBg, setColorBg] = useState(false);
 
     const changeBgHeader = () => {
         if (window.scrollY > 40) {

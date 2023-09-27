@@ -3,7 +3,7 @@ interface CardPost {
     image: string;
     date: string;
     title: string;
-    text: string;
+    text: string[];
 };
 
 export default CardPost;
