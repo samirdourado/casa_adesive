@@ -59,17 +59,3 @@ const dataCards = [
 ];
 
 export default dataCards;
-
-// `
-//             A parede de cimento queimado vem conquistando cada vez mais espaço na decoração de interiores, trazendo consigo uma estética bruta e moderna. 
-//             Neste artigo, vamos explorar a origem desse revestimento e suas características marcantes, que o tornam uma opção versátil e cheia de personalidade  para transformar ambientes.
-//             Características da Parede de Cimento Queimado: A parede de cimento queimado se destaca pela sua textura rústica e aspecto industrial. 
-//             Com tons neutros e uma aparência única, esse revestimento é capaz de criar um ambiente sofisticado e contemporâneo. Sua versatilidade permite combinações com 
-//             diversos estilos de decoração, tornando-se uma escolha popular para quem busca uma estética urbana e elegante. 
-//             Origem e Evolução: O cimento queimado tem suas raízes na arquitetura e construção civil, sendo utilizado inicialmente como um revestimento de pisos. 
-//             Com o passar do tempo, seu uso foi ampliado para as paredes, proporcionando um visual bruto e original. Inspirado nas técnicas industriais, o cimento queimado conquistou 
-//             espaço na decoração de interiores, trazendo consigo uma sensação de contemporaneidade e autenticidade. Conclusão: A parede de cimento queimado é uma opção de revestimento 
-//             que atrai olhares e transmite personalidade aos ambientes. Suas características rústicas e sua origem industrial conferem um estilo único, capaz de transformar qualquer 
-//             espaço em um ambiente sofisticado e moderno. Seja em projetos residenciais ou comerciais, a parede de cimento queimado é uma escolha que agrega valor estético e traz uma 
-//             atmosfera única.
-//         `

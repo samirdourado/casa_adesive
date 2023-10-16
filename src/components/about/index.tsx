@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 import { useNavContext } from '@/contexts/navContext';
 
 const About = () => {
-  const { aboutActive }: any = useNavContext();
+  const { aboutActive, handleWhatsApp  }: any = useNavContext();
   
     return (      
       <section className={ aboutActive ? styles.description__active : styles.description } id='quemsomos'>
@@ -15,6 +15,7 @@ const About = () => {
         className={styles.description__bt__whatsapp}
         icon={<BsWhatsapp/>}
         text={'Whatsapp'}
+        onClick={ () => handleWhatsApp() }
       />
     </section>
     );

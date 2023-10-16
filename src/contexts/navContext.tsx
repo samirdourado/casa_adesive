@@ -13,7 +13,9 @@ interface navProviderData {
     contactActive: boolean;
     setContactActive: React.Dispatch<React.SetStateAction<boolean>>;
     menuActivate: boolean;
-    setMenuActivate: React.Dispatch<React.SetStateAction<boolean>>
+    setMenuActivate: React.Dispatch<React.SetStateAction<boolean>>;
+    handleWhatsApp: () => void;
+    instagramLink: string;
 };
 
 const NavContext = createContext<navProviderData>({} as navProviderData);
@@ -24,6 +26,14 @@ export const NavProvider = ({ children }: Props) => {
     const [contactActive, setContactActive] = useState(false);
     const [menuActivate, setMenuActivate] = useState(false);
 
+    const instagramLink = "https://www.instagram.com/casaadesive/";
+
+    const handleWhatsApp = () => {
+        const urlMessage = `Olá, quero saber mais sobre envelopamento`;
+        const urlWhatsApp = `https://wa.me/5511993054964/?text=${urlMessage}`;
+        window.open(urlWhatsApp, '_blank');
+    };
+
     return (
         <NavContext.Provider
             value={{
@@ -31,6 +41,7 @@ export const NavProvider = ({ children }: Props) => {
                 hintActive, setHintActive,
                 contactActive, setContactActive,
                 menuActivate, setMenuActivate,
+                instagramLink, handleWhatsApp,
             }}
         >
             { children }

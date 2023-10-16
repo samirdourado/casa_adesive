@@ -7,8 +7,13 @@ import styles from './styles.module.scss';
 import { FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Footer from '@/components/footer';
 import CardPost from '@/interface/card.interface';
+import Button from '@/components/button';
+import { BsWhatsapp, BsInstagram } from 'react-icons/bs';
+import { useNavContext } from '@/contexts/navContext';
 
 const PostHints = ({ params }: { params: { id: number } }) => {
+
+    const { handleWhatsApp, instagramLink  }: any = useNavContext();
 
     const dataPost = dataCards.filter((data: any) => data.id == params.id)
     const othersPost = dataCards.filter((data: any) => data.id != params.id)   
@@ -89,7 +94,21 @@ const PostHints = ({ params }: { params: { id: number } }) => {
             </section>
             <section className={styles.footer__subContainer}>
                 <h2>Entre em contato</h2>
-                
+                <Button
+                    className={styles.buttons__contacts__area}
+                    icon={<BsWhatsapp size={20}/>}
+                    text={'Clique aqui e faça seu orçamento'}
+                    onClick={ () => handleWhatsApp() }
+                />
+
+                <h2>Siga nas redes sociais</h2>
+                <div>
+                <Button
+                    className={styles.button__instagram} 
+                    icon={<BsInstagram size={48}/>}
+                    onClick={ () => window.open(instagramLink, "_blank") }
+                />
+                </div>
             </section>
         </section>
         <Footer/>
