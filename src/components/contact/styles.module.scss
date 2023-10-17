@@ -1,0 +1,67 @@
+@use 'abstracts' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+};
+
+.container__active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+};
+
+.container > h2 {
+    margin-bottom: 1.25rem;
+};
+
+.container > p {
+    margin-bottom: 1.25rem;
+    text-align: center;
+    color: $color-grey-3;
+    
+    @media (max-width: 79.9375rem) {
+        max-width: 36.25rem;
+    };
+    
+    @media (min-width: 80rem) {
+        max-width: 50rem;
+    };
+};
+
+.button__instagram {
+    border: none;
+    margin-bottom: 3.125rem;
+    background-color: transparent;
+    cursor: pointer;
+};
+
+.buttons__contacts__area {
+    padding: 0.625rem 0.625rem;
+    max-width: 12.5rem;
+    max-height: 3.75rem;
+    cursor: pointer;
+    border: none;
+    background-color: $color-brand-1;    
+    color: $color-white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 1.875rem;
+};
+
+.maps__container {
+    margin: 0 auto;
+    border: none;
+    margin-bottom: 1.875rem;
+    
+    @media (max-width: 750px) {
+        width: 100%;        
+    };
+
+    @media (min-width: 751px) {
+        width: 100%;        
+    };
+};

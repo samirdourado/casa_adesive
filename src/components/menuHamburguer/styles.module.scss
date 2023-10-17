@@ -1,0 +1,84 @@
+@use 'abstracts' as *;
+
+.backdrop{
+    @media (max-width: 750px) {        
+        width: 100vw;
+        height: 100vh;
+        background-color: $color-transparent;
+        backdrop-filter: blur(2px);
+        position: fixed;
+        top:0;
+        left:0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+    };
+
+    @media (min: 751px) {
+        display: none
+    };
+};
+
+.menu__container {
+    @media (max-width: 750px) {
+        width: 90vw;
+        max-width: 450px;
+        height: 100vh;
+        background-color: $color-brand-1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        animation: slide-in ease-in-out 0.5s;
+    };
+
+    @media (min-width: 751px) {
+        display: none;
+    };
+};
+
+@keyframes slide-in {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+};
+
+.button__close {
+    @media (max-width: 750px) {        
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;        
+    }
+    @media (min-width: 751px) {
+        display: none;
+    };
+};
+
+.nav__container__mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-brand-1;
+    
+};
+
+.nav__container__mobile > a {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    @include text-style-font-6;
+    color: $color-white;
+    border-bottom: solid 1px $color-brand-2;
+};
+
+.nav__container__mobile > a:hover {    
+    text-decoration: underline;
+};

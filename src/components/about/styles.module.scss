@@ -1,0 +1,71 @@
+@use 'abstracts' as *;
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 36.25rem;
+
+    @media (max-width: 79.9375rem) {
+        padding: 0 1.25rem;        
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 1.875rem;
+    };
+
+    @media (min-width: 79.9375rem) {
+        margin-left: 3.125rem;
+        margin-bottom: 4.375rem;
+    };
+};
+
+.description__active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 36.25rem;
+    transform: ease 0.3;
+
+    @media (max-width: 79.9375rem) {
+        padding: 9.375rem 0 0 1.25rem;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 1.875rem;
+    };
+
+    @media (min-width: 79.9375rem) {
+        margin-left: 3.125rem;
+        margin-bottom: 4.375rem;
+        padding-top: 150px;
+    };
+};
+
+.description > h1 {
+    @include text-style-font-7;
+    color: $color-black;
+};
+
+.description > p {
+    color: $color-grey-3;
+
+    @media (max-width: 79.9375rem) {
+        text-align: center;
+    };
+
+    @media (min-width: 79.9375rem) {
+        text-align: left;
+    };
+};
+
+.description__bt__whatsapp {
+    padding: 0.625rem 0.625rem;
+    max-width: 7.5rem;
+    max-height: 3.75rem;
+    cursor: pointer;
+    border: none;
+    background-color: $color-brand-1;    
+    color: $color-white;
+    font-weight: 600;
+};
