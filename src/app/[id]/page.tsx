@@ -15,8 +15,10 @@ const PostHints = ({ params }: { params: { id: number } }) => {
 
     const { handleWhatsApp, instagramLink  }: any = useNavContext();
 
-    const dataPost = dataCards.filter((data: any) => data.id == params.id)
-    const othersPost = dataCards.filter((data: any) => data.id != params.id)   
+    const dataPost = dataCards.filter((data: any) => data.id == params.id);
+    const othersPost = dataCards.filter((data: any) => data.id != params.id);
+
+    const currentUrl = window.location.href;
 
     return (
         <div className={styles.body}>
@@ -27,7 +29,7 @@ const PostHints = ({ params }: { params: { id: number } }) => {
                 dataPost.map((data: any) => (
                     <main key={data.id} className={styles.post__container}>                        
                         <Link 
-                          href={'http://localhost:3000/'} 
+                          href={'index.html'} 
                           className={styles.post__text__small}
                         >
                             {'< Todas as postagens'}
@@ -49,8 +51,8 @@ const PostHints = ({ params }: { params: { id: number } }) => {
                             <span className={styles.share__span__container}>
                                 <p className={styles.post__text__small}>Compartilhar esta publicação:</p>
                                 <span className={styles.share__spanButons__container}>
-                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => console.log('facebook')}/>
-                                    <FaSquareXTwitter size={32} className={styles.share__butons} onClick={() => console.log('twitter')}/>
+                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => console.log('compartilhar no facebook')}/>
+                                    <FaSquareXTwitter size={32} className={styles.share__butons} onClick={() => console.log('compartilhar no twitter')}/>
                                 </span>
                             </span>
                             <Link 
