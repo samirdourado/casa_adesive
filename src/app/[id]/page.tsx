@@ -29,7 +29,7 @@ const PostHints = ({ params }: { params: { id: number } }) => {
                 dataPost.map((data: any) => (
                     <main key={data.id} className={styles.post__container}>                        
                         <Link 
-                          href={'index.html'} 
+                          href={'/'} 
                           className={styles.post__text__small}
                         >
                             {'< Todas as postagens'}
@@ -56,7 +56,7 @@ const PostHints = ({ params }: { params: { id: number } }) => {
                                 </span>
                             </span>
                             <Link 
-                          href={'http://localhost:3000/'} 
+                          href={'/'} 
                           className={styles.post__text__small}
                         >
                             {'< Voltar'}
