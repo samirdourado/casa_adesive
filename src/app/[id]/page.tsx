@@ -58,7 +58,7 @@ const PostHints = ({ params }: { params: { id: number } }) => {
                             <span className={styles.share__span__container}>
                                 <p className={styles.post__text__small}>Compartilhar esta publicação:</p>
                                 <span className={styles.share__spanButons__container}>
-                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => handleFacebook('http://localhost:3000/' + data.id)}/>                                    
+                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => handleFacebook('https://casa-adesive.vercel.app/' + data.id)}/>                                    
                                     <FaSquareXTwitter size={32} className={styles.share__butons} onClick={() => console.log('compartilhar no twitter')}/>
                                 </span>
                             </span>
