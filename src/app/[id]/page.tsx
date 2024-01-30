@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect} from 'react';
 import dataCards from '@/database';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,15 +10,22 @@ import CardPost from '@/interface/card.interface';
 import Button from '@/components/button';
 import { BsWhatsapp, BsInstagram } from 'react-icons/bs';
 import { useNavContext } from '@/contexts/navContext';
+import { useRouter } from 'next/router';
+// import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation'
+import { getURL } from 'next/dist/shared/lib/utils';
+
 
 const PostHints = ({ params }: { params: { id: number } }) => {
 
-    const { handleWhatsApp, instagramLink  }: any = useNavContext();
+    const { handleWhatsApp, instagramLink, handleFacebook  }: any = useNavContext();
 
     const dataPost = dataCards.filter((data: any) => data.id == params.id);
-    const othersPost = dataCards.filter((data: any) => data.id != params.id);
-
-    const currentUrl = window.location.href;
+    const othersPost = dataCards.filter((data: any) => data.id != params.id);    
+    
+    // const currentUrl = window.location.href;
+    // const currentUrl = getURL();
+    // console.log(currentUrl);
 
     return (
         <div className={styles.body}>
@@ -51,7 +58,7 @@ const PostHints = ({ params }: { params: { id: number } }) => {
                             <span className={styles.share__span__container}>
                                 <p className={styles.post__text__small}>Compartilhar esta publicação:</p>
                                 <span className={styles.share__spanButons__container}>
-                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => console.log('compartilhar no facebook')}/>
+                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => handleFacebook('http://localhost:3000/' + data.id)}/>                                    
                                     <FaSquareXTwitter size={32} className={styles.share__butons} onClick={() => console.log('compartilhar no twitter')}/>
                                 </span>
                             </span>
