@@ -10,10 +10,7 @@ import CardPost from '@/interface/card.interface';
 import Button from '@/components/button';
 import { BsWhatsapp, BsInstagram } from 'react-icons/bs';
 import { useNavContext } from '@/contexts/navContext';
-import { useRouter } from 'next/router';
-// import { useRouter } from 'next/navigation';
-import { usePathname } from 'next/navigation'
-import { getURL } from 'next/dist/shared/lib/utils';
+
 
 
 const PostHints = ({ params }: { params: { id: number } }) => {
@@ -21,11 +18,7 @@ const PostHints = ({ params }: { params: { id: number } }) => {
     const { handleWhatsApp, instagramLink, handleFacebook, handleTwitter }: any = useNavContext();
 
     const dataPost = dataCards.filter((data: any) => data.id == params.id);
-    const othersPost = dataCards.filter((data: any) => data.id != params.id);    
-    
-    // const currentUrl = window.location.href.toString();
-    // const currentUrl = getURL();
-    // console.log(currentUrl);
+    const othersPost = dataCards.filter((data: any) => data.id != params.id);
 
     return (
         <div className={styles.body}>
