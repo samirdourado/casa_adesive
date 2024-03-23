@@ -18,12 +18,12 @@ import { getURL } from 'next/dist/shared/lib/utils';
 
 const PostHints = ({ params }: { params: { id: number } }) => {
 
-    const { handleWhatsApp, instagramLink, handleFacebook  }: any = useNavContext();
+    const { handleWhatsApp, instagramLink, handleFacebook, handleTwitter }: any = useNavContext();
 
     const dataPost = dataCards.filter((data: any) => data.id == params.id);
     const othersPost = dataCards.filter((data: any) => data.id != params.id);    
     
-    // const currentUrl = window.location.href;
+    // const currentUrl = window.location.href.toString();
     // const currentUrl = getURL();
     // console.log(currentUrl);
 
@@ -34,6 +34,7 @@ const PostHints = ({ params }: { params: { id: number } }) => {
             {
             dataPost ? (
                 dataPost.map((data: any) => (
+                    
                     <main key={data.id} className={styles.post__container}>                        
                         <Link 
                           href={'/'} 
@@ -58,8 +59,8 @@ const PostHints = ({ params }: { params: { id: number } }) => {
                             <span className={styles.share__span__container}>
                                 <p className={styles.post__text__small}>Compartilhar esta publicação:</p>
                                 <span className={styles.share__spanButons__container}>
-                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => handleFacebook('https://casa-adesive.vercel.app/' + data.id)}/>                                    
-                                    <FaSquareXTwitter size={32} className={styles.share__butons} onClick={() => console.log('compartilhar no twitter')}/>
+                                    <FaSquareFacebook size={32} className={styles.share__butons} onClick={() => handleFacebook(`https://casa-adesive.vercel.app/${data.id}`)}/>                                    
+                                    <FaSquareXTwitter size={32} className={styles.share__butons} onClick={() => handleTwitter(`https://casa-adesive.vercel.app/${data.id}`)}/>
                                 </span>
                             </span>
                             <Link 
