@@ -11,10 +11,6 @@ import { useRouter } from 'next/navigation'
 const HintsCard = () => {
     const { push } = useRouter();
 
-    // const handlePost = (id: number) => {        
-    //     push(`/dicas/${id}`);
-    // };
-
     return (
         <>
         {
@@ -37,8 +33,7 @@ const HintsCard = () => {
                         <p className={styles.card__body__description}>{data.text}</p>
                         <Link 
                             href={data.id+""}
-                            className={styles.card__body__nav}
-                            // onClick={() => handlePost(data.id)}
+                            className={styles.card__body__nav}                            
                         >
                         Ler
                         </Link>

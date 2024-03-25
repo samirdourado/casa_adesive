@@ -16,7 +16,8 @@ interface navProviderData {
     setMenuActivate: React.Dispatch<React.SetStateAction<boolean>>;
     handleWhatsApp: () => void;
     instagramLink: string;
-    handleFacebook: (pageUrl: string) => void
+    handleFacebook: (pageUrl: string) => void;
+    handleTwitter: (pageUrl: string) => void;
 };
 
 const NavContext = createContext<navProviderData>({} as navProviderData);
@@ -40,6 +41,11 @@ export const NavProvider = ({ children }: Props) => {
         window.open(facebookUrl, '_blank')
     };
 
+    const handleTwitter = (pageUrl: string) => {
+        const twitterUrl: string = `https://twitter.com/intent/tweet?text=${pageUrl}`
+        window.open(twitterUrl, '_blank')
+    };
+
     return (
         <NavContext.Provider
             value={{
@@ -48,7 +54,7 @@ export const NavProvider = ({ children }: Props) => {
                 contactActive, setContactActive,
                 menuActivate, setMenuActivate,
                 instagramLink, handleWhatsApp,
-                handleFacebook,
+                handleFacebook, handleTwitter,
             }}
         >
             { children }
